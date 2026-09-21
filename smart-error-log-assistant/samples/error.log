@@ -1,0 +1,5 @@
+2026-09-21 10:14:03 ERR Request failed for customer 1842
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Orders.Api.Services.OrderService.CreateAsync(CreateOrderRequest request) in /src/Orders.Api/Services/OrderService.cs:line 42
+   at Orders.Api.Controllers.OrdersController.Post(CreateOrderRequest request) in /src/Orders.Api/Controllers/OrdersController.cs:line 28
+request-context: customerId=1842 environment=development
