@@ -5,8 +5,10 @@ using SmartErrorLogAssistant;
 
 const int MaxLogCharacters = 100_000;
 
+Console.WriteLine("Smart Error Log Assistant starting...");
 try
 {
+	EnvironmentFile.Load();
 	var options = CommandLineOptions.Parse(args);
 
 	if (options.ShowHelp)

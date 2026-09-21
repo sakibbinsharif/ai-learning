@@ -758,7 +758,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "/workspaces/ai-learning/smart-error-log-assistant/smart-error-log-assistant.csproj",
-      "projectName": "smart-error-log-assistant",
+      "projectName": "smartlogagent",
       "projectPath": "/workspaces/ai-learning/smart-error-log-assistant/smart-error-log-assistant.csproj",
       "packagesPath": "/home/codespace/.nuget/packages/",
       "outputPath": "/workspaces/ai-learning/smart-error-log-assistant/obj/",

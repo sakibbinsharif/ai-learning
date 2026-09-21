@@ -150,7 +150,13 @@ The included sample logs can be used to verify the application locally:
 
 ## Configuration
 
-Do not commit API keys, connection strings, or other secrets. Prefer environment variables, user secrets during local development, or a managed identity in Azure.
+Copy `.env.example` to `.env` and replace the placeholder values. The application loads `.env` automatically, whether it is started from the app directory or the repository root. Existing shell environment variables take precedence over values in `.env`.
+
+```bash
+cp .env.example .env
+```
+
+Do not commit API keys, connection strings, or other secrets. The local `.env` file is ignored by Git. User secrets during local development or a managed identity in Azure are also appropriate alternatives.
 
 For an Azure OpenAI setup, the application will typically need values equivalent to:
 
@@ -160,7 +166,7 @@ export AZURE_OPENAI_API_KEY="your-api-key"
 export AZURE_OPENAI_DEPLOYMENT="your-chat-deployment-name"
 ```
 
-Names may differ slightly depending on the configuration approach used in the implementation. The deployment name is the name of the model deployment in Azure, not necessarily the underlying model name.
+The deployment name is the name of the model deployment in Azure, not necessarily the underlying model name.
 
 Once these variables are set, run:
 

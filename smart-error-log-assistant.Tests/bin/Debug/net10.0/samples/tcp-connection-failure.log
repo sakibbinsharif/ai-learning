@@ -1,0 +1,15 @@
+2026-09-21 11:02:14.781 +00:00 ERR OrderWorker failed to connect to the inventory service.
+System.Net.Sockets.SocketException (111): Connection refused [::1]:7012
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Inventory.Client.InventoryClient.GetAvailabilityAsync(String sku, CancellationToken cancellationToken) in /src/Inventory.Client/InventoryClient.cs:line 87
+   at Orders.Worker.Handlers.OrderHandler.ProcessAsync(OrderMessage message, CancellationToken cancellationToken) in /src/Orders.Worker/Handlers/OrderHandler.cs:line 54
+   at Orders.Worker.Worker.ExecuteAsync(CancellationToken stoppingToken) in /src/Orders.Worker/Worker.cs:line 39
+
+Request details: method=GET scheme=http host=localhost port=7012 path=/api/inventory/availability/sku-1842
+Retry policy: attempt=3 maxAttempts=3 delayMs=1000
+Environment: development
+CorrelationId: 7f5bbf75-2c6c-4f1a-9b87-000000000001
