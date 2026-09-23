@@ -1,14 +1,15 @@
 ﻿using Azure;
 using Azure.AI.OpenAI;
-using Microsoft.Extensions.AI;
 using SmartErrorLogAssistant;
+using OpenAI.Chat;
 
 const int MaxLogCharacters = 100_000;
 
-Console.WriteLine("Smart Error Log Assistant starting...");
 try
 {
-	EnvironmentFile.Load();
+
+	LoadEnvironment();
+
 	var options = CommandLineOptions.Parse(args);
 
 	if (options.ShowHelp)
@@ -39,22 +40,42 @@ try
 	var apiKey = GetRequiredEnvironmentVariable("AZURE_OPENAI_API_KEY");
 	var deployment = GetRequiredEnvironmentVariable("AZURE_OPENAI_DEPLOYMENT");
 
-		var azureClient = new AzureOpenAIClient(new Uri(endpoint), new AzureKeyCredential(apiKey));
-	using var chatClient = azureClient.GetChatClient(deployment).AsIChatClient();
+	endpoint = endpoint.TrimEnd('/');
+	endpoint = endpoint.EndsWith("/openai/v1", StringComparison.OrdinalIgnoreCase)
+		? endpoint[..^"/openai/v1".Length]
+		: endpoint;
 
-	using var cancellationSource = new CancellationTokenSource(TimeSpan.FromSeconds(90));
-	var messages = new[]
+	var azureClient = new AzureOpenAIClient(new Uri(endpoint), new AzureKeyCredential(apiKey));
+	// using var chatClient = azureClient.GetChatClient(deployment).AsIChatClient();
+
+	// using var cancellationSource = new CancellationTokenSource(TimeSpan.FromSeconds(90));
+	// var messages = new[]
+	// {
+	// 	new ChatMessage(ChatRole.System, PromptBuilder.SystemPrompt),
+	// 	new ChatMessage(ChatRole.User, prompt)
+	// };
+
+	// var response = await chatClient.GetResponseAsync(
+	// 	messages,
+	// 	new ChatOptions { Temperature = 0.2f },
+	// 	cancellationSource.Token);
+
+	// Console.WriteLine(response.Text);
+
+	var chatClient = azureClient.GetChatClient(deployment);
+	var result = await chatClient.CompleteChatAsync(
+	[
+		new SystemChatMessage(PromptBuilder.SystemPrompt),
+		new UserChatMessage(prompt)
+	]);
+
+	foreach (var part in result.Value.Content)
 	{
-		new ChatMessage(ChatRole.System, PromptBuilder.SystemPrompt),
-		new ChatMessage(ChatRole.User, prompt)
-	};
+		Console.WriteLine(part.Text);
+	}
 
-	var response = await chatClient.GetResponseAsync(
-		messages,
-		new ChatOptions { Temperature = 0.2f },
-		cancellationSource.Token);
 
-	Console.WriteLine(response.Text);
+
 	return 0;
 }
 catch (FileNotFoundException exception)
@@ -83,6 +104,27 @@ catch (InvalidOperationException exception)
 	return 2;
 }
 
+static void LoadEnvironment()
+{
+	EnvironmentFile.Load();
+	var runtimeCounter = Environment.GetEnvironmentVariable("RuntimeCounter");
+	int counter = 0;
+	if (runtimeCounter == null)
+	{
+		counter = 1;
+		Environment.SetEnvironmentVariable("RuntimeCounter", "1", EnvironmentVariableTarget.Process);
+	}
+	else
+	{
+		counter = int.Parse(runtimeCounter);
+		counter++;
+		Environment.SetEnvironmentVariable("RuntimeCounter", counter.ToString(), EnvironmentVariableTarget.Process);
+	}
+	Console.WriteLine($"{DateTime.Now:yyyy-MM-dd HH:mm:ss}" +
+			$" RuntimeCounter: {counter.ToString()}" +
+			$" - Smart Error Log Assistant starting...");
+
+}
 static string GetRequiredEnvironmentVariable(string name)
 {
 	var value = Environment.GetEnvironmentVariable(name);

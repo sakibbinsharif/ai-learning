@@ -1,29 +1,39 @@
 ﻿using System.ClientModel;
-using OpenAI;
+using Azure.AI.OpenAI;
 using OpenAI.Chat;
 using DotNetEnv;
+using Azure;
 
 
-// string endpoint = "https://sakib3912-9114-resource.services.ai.azure.com/openai/v1";
-// string apiKey = "6pT49RMSyEQmno5SjFK3QxIdma8rtXNYss8TwWiLpxPW4pbVOvgiJQQJ99CIACMsfrFXJ3w3AAAAACOG9Wtr";
-// string deploymentName = "gpt-5-mini";
- Env.Load();
+LoadEnvironment();
 string endpoint = GetRequiredEnvironmentVariable("AZURE_OPENAI_ENDPOINT");
 string apiKey = GetRequiredEnvironmentVariable("AZURE_OPENAI_API_KEY");
 string deploymentName = GetRequiredEnvironmentVariable("AZURE_OPENAI_DEPLOYMENT");
 
+endpoint = endpoint.TrimEnd('/');
+endpoint = endpoint.EndsWith("/openai/v1", StringComparison.OrdinalIgnoreCase)
+    ? endpoint[..^"/openai/v1".Length]
+    : endpoint;
 
 Console.WriteLine($"This is a simple LLM Call. Time of the call: {DateTime.Now}");
-ChatClient chatClient = new(
-    deploymentName,
-    new ApiKeyCredential(apiKey),
-    new OpenAIClientOptions
-    {
-        Endpoint = new Uri($"{endpoint}")
-    });
-ChatCompletion response = chatClient.CompleteChat("Hello there. tell me about yourself");
+AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(new Uri(endpoint), new AzureKeyCredential(apiKey));
+// ChatClient chatClient = azureOpenAIClient.GetChatClient(deploymentName);
+// ChatCompletion response = chatClient.CompleteChat("Hello there. tell me about yourself");
 
-Console.WriteLine(response.Content[0].Text);
+
+
+var chatClient = azureOpenAIClient.GetChatClient(deploymentName);
+var result = await chatClient.CompleteChatAsync(
+    [
+        new SystemChatMessage("You are a helpful assistant that provides information about yourself."),
+        new UserChatMessage("Hello there. tell me about yourself")
+    ]);
+
+foreach (var part in result.Value.Content)
+{
+    Console.WriteLine(part.Text);
+}
+
 
 
 static string GetRequiredEnvironmentVariable(string name)
@@ -37,4 +47,25 @@ static string GetRequiredEnvironmentVariable(string name)
     }
 
     return value;
+}
+static void LoadEnvironment()
+{
+	Env.Load();
+	var runtimeCounter = Environment.GetEnvironmentVariable("RuntimeCounter");
+	int counter = 0;
+	if (runtimeCounter == null)
+	{
+		counter = 1;
+		Environment.SetEnvironmentVariable("RuntimeCounter", "1", EnvironmentVariableTarget.Process);
+	}
+	else
+	{
+		counter = int.Parse(runtimeCounter);
+		counter++;
+		Environment.SetEnvironmentVariable("RuntimeCounter", counter.ToString(), EnvironmentVariableTarget.Process);
+	}
+	Console.WriteLine($"{DateTime.Now:yyyy-MM-dd HH:mm:ss}" +
+			$" RuntimeCounter: {counter.ToString()}" +
+			$" - AiPlayground starting...");
+
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("smart-error-log-assistant.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d2aa3ffd24c453aa38e3cb7f0eb277f6236bfb1d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9fa3882047be2b9471c2321311cdbe3d45320c6c")]
 [assembly: System.Reflection.AssemblyProductAttribute("smart-error-log-assistant.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("smart-error-log-assistant.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

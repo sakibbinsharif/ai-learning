@@ -50,17 +50,9 @@
               "target": "Package",
               "version": "[2.1.0, )"
             },
-            "Azure.Identity": {
+            "OpenAI": {
               "target": "Package",
-              "version": "[1.21.0, )"
-            },
-            "Microsoft.Extensions.AI": {
-              "target": "Package",
-              "version": "[10.10.0, )"
-            },
-            "Microsoft.Extensions.AI.OpenAI": {
-              "target": "Package",
-              "version": "[10.10.0, )"
+              "version": "[2.1.0, )"
             }
           },
           "imports": [
