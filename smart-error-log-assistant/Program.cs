@@ -39,7 +39,7 @@ try
 	var apiKey = GetRequiredEnvironmentVariable("AZURE_OPENAI_API_KEY");
 	var deployment = GetRequiredEnvironmentVariable("AZURE_OPENAI_DEPLOYMENT");
 
-	var azureClient = new AzureOpenAIClient(new Uri(endpoint), new AzureKeyCredential(apiKey));
+		var azureClient = new AzureOpenAIClient(new Uri(endpoint), new AzureKeyCredential(apiKey));
 	using var chatClient = azureClient.GetChatClient(deployment).AsIChatClient();
 
 	using var cancellationSource = new CancellationTokenSource(TimeSpan.FromSeconds(90));

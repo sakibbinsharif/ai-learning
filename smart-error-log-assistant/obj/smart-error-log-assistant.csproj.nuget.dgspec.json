@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/workspaces/ai-learning/smart-error-log-assistant/smart-error-log-assistant.csproj": {}
+    "C:\\Users\\sakib\\SourceCodes\\CodeRepo\\GitHub\\ai-learning\\ai-learning\\smart-error-log-assistant\\smart-error-log-assistant.csproj": {}
   },
   "projects": {
-    "/workspaces/ai-learning/smart-error-log-assistant/smart-error-log-assistant.csproj": {
+    "C:\\Users\\sakib\\SourceCodes\\CodeRepo\\GitHub\\ai-learning\\ai-learning\\smart-error-log-assistant\\smart-error-log-assistant.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/workspaces/ai-learning/smart-error-log-assistant/smart-error-log-assistant.csproj",
+        "projectUniqueName": "C:\\Users\\sakib\\SourceCodes\\CodeRepo\\GitHub\\ai-learning\\ai-learning\\smart-error-log-assistant\\smart-error-log-assistant.csproj",
         "projectName": "smartlogagent",
-        "projectPath": "/workspaces/ai-learning/smart-error-log-assistant/smart-error-log-assistant.csproj",
-        "packagesPath": "/home/codespace/.nuget/packages/",
-        "outputPath": "/workspaces/ai-learning/smart-error-log-assistant/obj/",
+        "projectPath": "C:\\Users\\sakib\\SourceCodes\\CodeRepo\\GitHub\\ai-learning\\ai-learning\\smart-error-log-assistant\\smart-error-log-assistant.csproj",
+        "packagesPath": "C:\\Users\\sakib\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sakib\\SourceCodes\\CodeRepo\\GitHub\\ai-learning\\ai-learning\\smart-error-log-assistant\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/codespace/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\sakib\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -50,6 +50,10 @@
               "target": "Package",
               "version": "[2.1.0, )"
             },
+            "Azure.Identity": {
+              "target": "Package",
+              "version": "[1.21.0, )"
+            },
             "Microsoft.Extensions.AI": {
               "target": "Package",
               "version": "[10.10.0, )"
@@ -75,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.401/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
