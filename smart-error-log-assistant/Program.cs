@@ -104,6 +104,9 @@ catch (InvalidOperationException exception)
 	return 2;
 }
 
+/// <summary>
+/// Loads the .env file and initializes the process runtime counter before the application begins processing logs.
+/// </summary>
 static void LoadEnvironment()
 {
 	EnvironmentFile.Load();
@@ -125,6 +128,12 @@ static void LoadEnvironment()
 			$" - Smart Error Log Assistant starting...");
 
 }
+
+/// <summary>
+/// Reads a required environment variable and throws a clear error if it is missing or empty.
+/// </summary>
+/// <param name="name">The environment variable name to read.</param>
+/// <returns>The non-empty environment variable value.</returns>
 static string GetRequiredEnvironmentVariable(string name)
 {
 	var value = Environment.GetEnvironmentVariable(name);

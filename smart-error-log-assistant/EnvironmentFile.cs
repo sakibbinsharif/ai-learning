@@ -1,7 +1,13 @@
 namespace SmartErrorLogAssistant;
 
+/// <summary>
+/// Loads environment variables from a local .env file when present so configuration can be kept out of source control.
+/// </summary>
 internal static class EnvironmentFile
 {
+    /// <summary>
+    /// Reads values from the nearest .env file and sets them into the process environment if they are not already defined.
+    /// </summary>
     internal static void Load()
     {
         var path = FindFile(".env");
@@ -48,6 +54,11 @@ internal static class EnvironmentFile
         }
     }
 
+    /// <summary>
+    /// Searches upward from the current directory and the app base directory for a file with the specified name.
+    /// </summary>
+    /// <param name="fileName">The file name to locate, such as .env.</param>
+    /// <returns>The full path of the nearest matching file, or null if it is not found.</returns>
     private static string? FindFile(string fileName)
     {
         foreach (var startPath in new[] { Environment.CurrentDirectory, AppContext.BaseDirectory })
