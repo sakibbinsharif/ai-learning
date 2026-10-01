@@ -1,0 +1,31 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": ".NET Launch smart-error-log-assistant",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build smart-error-log-assistant",  
+      "cwd": "${workspaceFolder}/smart-error-log-assistant",
+      "console": "integratedTerminal",
+      "program": "${workspaceFolder}/smart-error-log-assistant/bin/Debug/net10.0/smartlogagent.dll",
+      "args": ["./samples/self.log"]
+    }
+  ]
+}
+// {
+//   "version": "0.1.0",
+//   "configurations": [
+//     {
+//       "name": ".NET Launch aiPlayground",
+//       "type": "coreclr",
+//       "request": "launch",
+//       "preLaunchTask": "build AiPlayground",
+//       "cwd": "${workspaceFolder}/AiPlayground",
+//       "console": "integratedTerminal",
+//       "program": "${workspaceFolder}/AiPlayground/bin/Debug/net10.0/AiPlayground.dll"
+//     }
+//   ]
+// }
+
+

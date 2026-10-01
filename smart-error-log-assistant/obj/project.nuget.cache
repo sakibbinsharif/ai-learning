@@ -1,28 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "W3F35ZwKpU8=",
+  "dgSpecHash": "rPysLlofClY=",
   "success": true,
-  "projectFilePath": "/workspaces/ai-learning/smart-error-log-assistant/smart-error-log-assistant.csproj",
+  "projectFilePath": "C:\\Users\\sakib\\SourceCodes\\CodeRepo\\GitHub\\ai-learning\\ai-learning\\smart-error-log-assistant\\smart-error-log-assistant.csproj",
   "expectedPackageFiles": [
-    "/home/codespace/.nuget/packages/azure.ai.openai/2.1.0/azure.ai.openai.2.1.0.nupkg.sha512",
-    "/home/codespace/.nuget/packages/azure.core/1.44.1/azure.core.1.44.1.nupkg.sha512",
-    "/home/codespace/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
-    "/home/codespace/.nuget/packages/microsoft.extensions.ai/10.10.0/microsoft.extensions.ai.10.10.0.nupkg.sha512",
-    "/home/codespace/.nuget/packages/microsoft.extensions.ai.abstractions/10.10.0/microsoft.extensions.ai.abstractions.10.10.0.nupkg.sha512",
-    "/home/codespace/.nuget/packages/microsoft.extensions.ai.openai/10.10.0/microsoft.extensions.ai.openai.10.10.0.nupkg.sha512",
-    "/home/codespace/.nuget/packages/microsoft.extensions.caching.abstractions/10.0.12/microsoft.extensions.caching.abstractions.10.0.12.nupkg.sha512",
-    "/home/codespace/.nuget/packages/microsoft.extensions.configuration.abstractions/10.0.3/microsoft.extensions.configuration.abstractions.10.0.3.nupkg.sha512",
-    "/home/codespace/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/10.0.12/microsoft.extensions.dependencyinjection.abstractions.10.0.12.nupkg.sha512",
-    "/home/codespace/.nuget/packages/microsoft.extensions.diagnostics.abstractions/10.0.3/microsoft.extensions.diagnostics.abstractions.10.0.3.nupkg.sha512",
-    "/home/codespace/.nuget/packages/microsoft.extensions.fileproviders.abstractions/10.0.3/microsoft.extensions.fileproviders.abstractions.10.0.3.nupkg.sha512",
-    "/home/codespace/.nuget/packages/microsoft.extensions.hosting.abstractions/10.0.3/microsoft.extensions.hosting.abstractions.10.0.3.nupkg.sha512",
-    "/home/codespace/.nuget/packages/microsoft.extensions.logging.abstractions/10.0.12/microsoft.extensions.logging.abstractions.10.0.12.nupkg.sha512",
-    "/home/codespace/.nuget/packages/microsoft.extensions.options/10.0.3/microsoft.extensions.options.10.0.3.nupkg.sha512",
-    "/home/codespace/.nuget/packages/microsoft.extensions.primitives/10.0.12/microsoft.extensions.primitives.10.0.12.nupkg.sha512",
-    "/home/codespace/.nuget/packages/openai/2.13.0/openai.2.13.0.nupkg.sha512",
-    "/home/codespace/.nuget/packages/system.clientmodel/1.14.0/system.clientmodel.1.14.0.nupkg.sha512",
-    "/home/codespace/.nuget/packages/system.memory.data/10.0.3/system.memory.data.10.0.3.nupkg.sha512",
-    "/home/codespace/.nuget/packages/system.numerics.tensors/10.0.12/system.numerics.tensors.10.0.12.nupkg.sha512"
+    "C:\\Users\\sakib\\.nuget\\packages\\azure.ai.openai\\2.1.0\\azure.ai.openai.2.1.0.nupkg.sha512",
+    "C:\\Users\\sakib\\.nuget\\packages\\azure.core\\1.44.1\\azure.core.1.44.1.nupkg.sha512",
+    "C:\\Users\\sakib\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
+    "C:\\Users\\sakib\\.nuget\\packages\\openai\\2.1.0\\openai.2.1.0.nupkg.sha512",
+    "C:\\Users\\sakib\\.nuget\\packages\\system.clientmodel\\1.2.1\\system.clientmodel.1.2.1.nupkg.sha512",
+    "C:\\Users\\sakib\\.nuget\\packages\\system.memory.data\\6.0.0\\system.memory.data.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

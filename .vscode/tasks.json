@@ -1,0 +1,42 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+        "label": "build AiPlayground",
+        "type": "process",
+        "command": "dotnet",
+        "args": [
+            "build",
+            "${workspaceFolder}/AiPlayground/AiPlayground.csproj"
+        ],
+        "problemMatcher": "$msCompile",
+        "group": {
+            "kind": "build",
+            "isDefault": false
+        }
+    },
+    {
+        "label": "build smart-error-log-assistant",
+        "type": "process",
+        "command": "dotnet",
+        "args": [
+            "build",
+            "${workspaceFolder}/smart-error-log-assistant/smart-error-log-assistant.csproj"
+        ],
+        "problemMatcher": "$msCompile",
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        }
+    },
+
+
+    {
+        "type": "dotnet",
+        "task": "build",
+        "group": "build",
+        "problemMatcher": [],
+        "label": "dotnet: build"
+    }
+]
+}

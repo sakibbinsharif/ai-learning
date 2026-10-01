@@ -1,0 +1,18 @@
+2026-09-21 11:36:09.514 +00:00 ERR ReportingWorker failed to deserialize the invoice response.
+System.Text.Json.JsonException: '<' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: '<' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.DeserializeAsync[TValue](Stream utf8Json, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Billing.Client.InvoiceClient.GetInvoiceAsync(String invoiceId, CancellationToken cancellationToken) in /src/Billing.Client/InvoiceClient.cs:line 119
+   at Reporting.Worker.InvoiceReportHandler.HandleAsync(InvoiceMessage message, CancellationToken cancellationToken) in /src/Reporting.Worker/InvoiceReportHandler.cs:line 63
+
+Request: GET https://billing.example.test/v1/invoices/inv-2026-1842
+Expected content type: application/json
+Actual content type: application/pdf
+HTTP status: 200 OK
+Content-Length: 248731
+Response preview (first 32 bytes, hexadecimal): 25-50-44-46-2D-31-2E-37-0A-25-E2-E3-CF-D3
+Response preview (ASCII): %PDF-1.7.%....
+Environment: staging
+CorrelationId: c91a4b2d-2a03-44f4-b4b3-000000000003

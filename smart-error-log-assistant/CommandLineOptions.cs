@@ -1,11 +1,17 @@
 namespace SmartErrorLogAssistant;
 
+/// <summary>
+/// Represents the command-line arguments accepted by the smart error log assistant.
+/// </summary>
 internal sealed record CommandLineOptions(
     string? LogPath,
     string? Context,
     bool DryRun,
     bool ShowHelp)
 {
+    /// <summary>
+    /// Displays the command usage text and required environment variables for the tool.
+    /// </summary>
     internal const string Usage = """
         Usage:
           dotnet run -- <path-to-log-file> [options]
@@ -21,6 +27,11 @@ internal sealed record CommandLineOptions(
           AZURE_OPENAI_DEPLOYMENT
         """;
 
+    /// <summary>
+    /// Parses the incoming command-line arguments into a strongly typed options object.
+    /// </summary>
+    /// <param name="args">The raw command-line arguments supplied by the user.</param>
+    /// <returns>A populated options record describing the requested run behavior.</returns>
     internal static CommandLineOptions Parse(string[] args)
     {
         string? logPath = null;

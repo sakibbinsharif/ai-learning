@@ -1,0 +1,14 @@
+2026-09-21 11:18:42.206 +00:00 ERR CustomerSync failed while calling the CRM contacts endpoint.
+System.Net.Http.HttpRequestException: The remote server returned an unsuccessful status code: 400 (Bad Request).
+ ---> System.Net.Http.HttpRequestException: CRM API error: INVALID_PARAMETER - Parameter 'countryCode' must be a two-letter ISO 3166-1 alpha-2 code.
+   at CustomerSync.Infrastructure.CrmClient.ThrowForErrorAsync(HttpResponseMessage response, CancellationToken cancellationToken) in /src/CustomerSync/Infrastructure/CrmClient.cs:line 142
+   at CustomerSync.Infrastructure.CrmClient.SearchContactsAsync(String email, String countryCode, CancellationToken cancellationToken) in /src/CustomerSync/Infrastructure/CrmClient.cs:line 76
+   at CustomerSync.Application.CustomerImporter.ImportAsync(CustomerRecord customer, CancellationToken cancellationToken) in /src/CustomerSync/Application/CustomerImporter.cs:line 51
+   at CustomerSync.Worker.SyncWorker.ProcessMessageAsync(SyncMessage message, CancellationToken cancellationToken) in /src/CustomerSync/Worker/SyncWorker.cs:line 93
+
+Outgoing request: POST https://crm.example.test/v2/contacts/search
+Request payload: { "email": "customer1842@example.test", "countryCode": "United States" }
+Response status: 400
+Response body: { "error": "INVALID_PARAMETER", "message": "countryCode must contain exactly two uppercase letters" }
+Environment: production
+CorrelationId: 4b5bbf75-7b5f-4b6a-8e20-000000000002
