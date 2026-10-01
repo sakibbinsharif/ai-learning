@@ -39,6 +39,7 @@ while (true)
 	Console.ForegroundColor = ConsoleColor.Green;
     Console.Write("You: ");
     var userMessage = Console.ReadLine();
+
     if (userMessage.Equals("exit", StringComparison.OrdinalIgnoreCase))
     {
         break;
