@@ -1034,11 +1034,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sakib\\SourceCodes\\CodeRepo\\GitHub\\ai-learning\\ai-learning\\smart-error-log-assistant.Tests\\smart-error-log-assistant.Tests.csproj",
+      "projectUniqueName": "c:\\Users\\sakib\\SourceCode\\Github\\ai-learning\\smart-error-log-assistant.Tests\\smart-error-log-assistant.Tests.csproj",
       "projectName": "smart-error-log-assistant.Tests",
-      "projectPath": "C:\\Users\\sakib\\SourceCodes\\CodeRepo\\GitHub\\ai-learning\\ai-learning\\smart-error-log-assistant.Tests\\smart-error-log-assistant.Tests.csproj",
+      "projectPath": "c:\\Users\\sakib\\SourceCode\\Github\\ai-learning\\smart-error-log-assistant.Tests\\smart-error-log-assistant.Tests.csproj",
       "packagesPath": "C:\\Users\\sakib\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sakib\\SourceCodes\\CodeRepo\\GitHub\\ai-learning\\ai-learning\\smart-error-log-assistant.Tests\\obj\\",
+      "outputPath": "c:\\Users\\sakib\\SourceCode\\Github\\ai-learning\\smart-error-log-assistant.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sakib\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1054,8 +1054,8 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\sakib\\SourceCodes\\CodeRepo\\GitHub\\ai-learning\\ai-learning\\smart-error-log-assistant\\smart-error-log-assistant.csproj": {
-              "projectPath": "C:\\Users\\sakib\\SourceCodes\\CodeRepo\\GitHub\\ai-learning\\ai-learning\\smart-error-log-assistant\\smart-error-log-assistant.csproj"
+            "C:\\Users\\sakib\\SourceCode\\Github\\ai-learning\\smart-error-log-assistant\\smart-error-log-assistant.csproj": {
+              "projectPath": "C:\\Users\\sakib\\SourceCode\\Github\\ai-learning\\smart-error-log-assistant\\smart-error-log-assistant.csproj"
             }
           }
         }
