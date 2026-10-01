@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rPysLlofClY=",
+  "dgSpecHash": "SXj7hlpqkmk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\sakib\\SourceCodes\\CodeRepo\\GitHub\\ai-learning\\ai-learning\\smart-error-log-assistant\\smart-error-log-assistant.csproj",
+  "projectFilePath": "C:\\Users\\sakib\\SourceCode\\Github\\ai-learning\\smart-error-log-assistant\\smart-error-log-assistant.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sakib\\.nuget\\packages\\azure.ai.openai\\2.1.0\\azure.ai.openai.2.1.0.nupkg.sha512",
     "C:\\Users\\sakib\\.nuget\\packages\\azure.core\\1.44.1\\azure.core.1.44.1.nupkg.sha512",

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("smartlogagent")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a9ff2404814e3e419d2806527235d231e942477d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+033d07fa6dd5ccdc85dd3aec7293b7e8cb54db5b")]
 [assembly: System.Reflection.AssemblyProductAttribute("smartlogagent")]
 [assembly: System.Reflection.AssemblyTitleAttribute("smartlogagent")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

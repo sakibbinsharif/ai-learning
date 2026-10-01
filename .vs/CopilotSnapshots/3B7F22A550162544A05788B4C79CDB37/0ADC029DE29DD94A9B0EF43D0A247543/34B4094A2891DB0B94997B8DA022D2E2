@@ -14,14 +14,4 @@
     <PackageReference Include="OpenAI" Version="2.1.0" />
   </ItemGroup>
 
-  <!-- Ensure local .env files are copied to the build output so Visual Studio runs load them at runtime -->
-  <ItemGroup>
-    <None Include=".env">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include=".env.example">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
 </Project>

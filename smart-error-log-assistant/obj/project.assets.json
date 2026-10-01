@@ -227,11 +227,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sakib\\SourceCodes\\CodeRepo\\GitHub\\ai-learning\\ai-learning\\smart-error-log-assistant\\smart-error-log-assistant.csproj",
+      "projectUniqueName": "C:\\Users\\sakib\\SourceCode\\Github\\ai-learning\\smart-error-log-assistant\\smart-error-log-assistant.csproj",
       "projectName": "smartlogagent",
-      "projectPath": "C:\\Users\\sakib\\SourceCodes\\CodeRepo\\GitHub\\ai-learning\\ai-learning\\smart-error-log-assistant\\smart-error-log-assistant.csproj",
+      "projectPath": "C:\\Users\\sakib\\SourceCode\\Github\\ai-learning\\smart-error-log-assistant\\smart-error-log-assistant.csproj",
       "packagesPath": "C:\\Users\\sakib\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sakib\\SourceCodes\\CodeRepo\\GitHub\\ai-learning\\ai-learning\\smart-error-log-assistant\\obj\\",
+      "outputPath": "C:\\Users\\sakib\\SourceCode\\Github\\ai-learning\\smart-error-log-assistant\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sakib\\AppData\\Roaming\\NuGet\\NuGet.Config"
